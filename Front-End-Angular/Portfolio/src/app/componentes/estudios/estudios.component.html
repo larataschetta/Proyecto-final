@@ -1,0 +1,23 @@
+<section class="seccion estudios">
+    <h2 id="estudios">
+        ESTUDIOS
+        <span><img class="vector vectorTres" src="/assets/imagenes/Vector 3.svg" alt="cuadro decoracion" width="270px"></span>   
+
+    </h2>
+
+    <hr class="hr hrTres">
+
+    <article class="articulo articulo-estudios" *ngFor="let estudios of estudiosDatos">
+        <div class="subtitulo">
+            <div>
+                <img src="/assets/imagenes/angle-right-solid 1.svg" width="15" alt="logo flecha">
+                <h3>{{estudios.carrera}}</h3>
+            </div>
+            <p class="año">{{estudios.anio}}</p>
+        </div>
+        <p>
+            {{estudios.descripcion}}
+        </p>
+    </article>
+
+</section>

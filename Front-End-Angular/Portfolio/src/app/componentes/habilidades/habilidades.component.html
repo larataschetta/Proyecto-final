@@ -1,0 +1,17 @@
+<section class="seccion habilidades">
+
+    <h2 id="habilidades">
+        HABILIDADES
+        <span><img class="vector vectorCuatro" src="/assets/imagenes/Vector 4.svg" alt="cuadro decoracion" width="320px"></span>
+    </h2>
+    
+    <hr class="hr hrCuatro">
+
+    <article *ngFor="let habilidad of habilidadesDatos">
+
+        <h3>{{habilidad.habilidad}}</h3>
+        <progress value="{{habilidad.porcentaje}}" max="100"></progress>
+        
+    </article>    
+
+</section>

@@ -1,0 +1,42 @@
+<section class="seccion experiencia">
+  
+    <h2 id="experiencia">
+        EXPERIENCIA
+        <span><img class="vector vectorDos" src="/assets/imagenes/Vector 2.svg" alt="cuadro decoracion" width="350px"></span>   
+    </h2>
+    
+    <hr class="hr hrDos">
+
+
+    <article class="articulo articulo-experiencia" *ngFor="let experiencia of experienciaDatos">
+        
+        <div class="subtitulo">
+
+            <div>
+                <img src="/assets/imagenes/angle-right-solid 1.svg" width="15" alt="logo flecha">
+                <h3>{{experiencia.trabajo}}</h3>
+            </div>
+            <p class="año">{{experiencia.anio}}</p>
+
+        </div>
+        
+        <p>
+            {{experiencia.tareas}}
+        </p>
+    
+    </article>
+<!-- 
+    <article class="articulo articulo-experiencia">
+    
+        <div class="subtitulo">
+            <div>
+                <img src="/imagenes/angle-right-solid 1.svg" width="15" alt="logo flecha">
+                <h3>Clases particulares de inglés</h3>
+            </div>
+            <p class="año">2020 - 2021</p>
+        </div>
+        <p>
+            Nivel básico e intermedio.
+        </p>
+    </article> -->
+</section>

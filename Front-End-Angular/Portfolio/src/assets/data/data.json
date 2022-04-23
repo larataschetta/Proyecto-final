@@ -1,0 +1,78 @@
+{
+    "nombre": "LARA TASCHETTA",
+    "ubicacion": "Buenos Aires - Argentina",
+    "git":"https://github.com/larataschetta",
+    "fotoPerfil": "PONER",  
+    "tituloPrograma": "Full Stack Developer Jr",
+    "descripcion": "Estudiante de Biotecnología y aficionada por la programación. Disfruto resolver problemas y diseñar cosas lindas.",
+    "experiencia": [{
+            "trabajo":"Kumikos - Microemprendimiento",
+            "anio": "2018 - 2020",
+            "tareas":"Atencion al cliente - Control y administracion de caja, libro diario, ficha de stock y balance - Manejo de redes."
+        },
+        {
+            "trabajo":"Clases particulares de inglés",
+            "anio": "2020 - 2021",
+            "tareas":"Nivel básico e intermedio."
+        }
+    ],
+
+    "estudios": [{
+            "carrera":"Programacion Web Full Stack",
+            "anio": "2021 - 2022",
+            "descripcion":"Curso Argentina Programa, desarrollado por el Ministerio de Desarrollo Productivo."
+        },
+        {
+            "carrera":"Licenciatura en Biotecnologia",
+            "anio": "2019 - PRESENTE",
+            "descripcion":"Universidad Nacional de Moreno (UNM), Cursando 3er año de carrera."
+        },
+        {
+            "carrera":"Bachiller con modalidad en economía y gestión de las organizaciones",
+            "anio": "2013 - 2018",
+            "descripcion":"Instituto Santa Maria de Guadalupe (Ituzaingó, Buenos Aires) Pormedio 8,72."
+        }
+    ],
+
+    "habilidades": [{
+            "habilidad":"HTML",
+            "porcentaje":"80"
+        },
+        {
+            "habilidad":"CSS",
+            "porcentaje":"80"
+        },
+        {
+            "habilidad":"JavaScript",
+            "porcentaje":"80"
+        },
+        {
+            "habilidad":"Ingles",
+            "porcentaje":"80"
+        },
+        {
+            "habilidad":"Angular",
+            "porcentaje":"80"
+        }
+    ],
+    "proyectos": [{
+            "nombreProyecto":"Portfolio Web",
+            "imagenProyecto":"assets/imagenes/ProyectoPortfolio.png",
+            "anio":"2022",
+            "descripcion":"sadasdklasdkklf djkasdj asjdasjkd shbdakj"
+        },
+        {
+            "nombreProyecto":"Calculadora",
+            "imagenProyecto":"PONERRRRRRRRRRRRRR",
+            "anio":"2022",
+            "descripcion":"asa sadasdklasdkklf djkasdj asjdasjkd shbdakj"
+        }
+    ],
+    
+    "footer": {
+        "localidad":"Ituzaingo, Buenos Aires",
+        "telefono":"(011) 15 2638 0775",
+        "mail":"Larataschetta@gmail.com"
+    }
+
+}

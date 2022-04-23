@@ -35,6 +35,43 @@ body{
     color: var(--color-letra-gris)
 }
 
+/* -------------- HEADER ------------------- */
+
+header{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header .titulo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logosAbajo{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1em;
+    padding-bottom: 1em;
+}
+
+header .titulo h1{
+    max-width: 10ch;
+
+    position: relative;
+    animation: cambiarColor 1s ease infinite;
+    color: var(--color-celeste);
+    font-family: var(--fuente-roboto);
+    font-weight: 10;
+    font-size: 8rem;
+    text-shadow: -5px -4px var(--color-fucsia);
+    line-height: 1em;
+    text-align: center;
+}
+
 
 /* NAV */
 
@@ -91,84 +128,23 @@ nav .link-sign-in:hover span{
     border-bottom: 1px solid var(--color-letra-gris);
 }    
 
-/* HEADER */
 
-header{
 
-    height: 100vh;
-    /* width: 100vw;     */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-header p{
-    text-align: center;    
-}
-
-header .titulo{
-    /* height: 100%; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-header .logosAbajo{
-    display: flex;
-    justify-content: space-between;
-    padding-inline: 1em;
-    padding-bottom: 1em;
-}
-header .titulo h1{
-    position: relative;
-    animation: cambiarColor 1s ease infinite;
-}
-
-/* MAIN */
+/* ----------------- MAIN --------------  */
 
 main{
     max-width: 130ch;
-    /* width: 95vw; */
     margin-inline: auto;
 }     
 
-section{
-    padding: 1em;
-}    
-section p{
-    margin-left: 3em;
-}    
-
-article{
-    padding: 1em;
-}    
-
-p{
-    font-size: 1.2em;
-    max-width: 60ch;
-}
-
-h1{
-    color: var(--color-celeste);
-    font-family: var(--fuente-roboto);
-    font-weight: 10;
-    font-size: 8rem;
-    text-shadow: -5px -4px var(--color-fucsia);
-    line-height: 1em;
-    text-align: center;
-}
-
 h2{
-    padding: 1% ;
+    padding: 2% ;
     font-size: 2em;
     width: 20%;
 }
 
 h3{
     max-width: 40ch;
-    /* margin-left: 2%; */
-    /* margin-bottom: 1.2em; */
     font-size: 1.4em;
     display: flex;    
 }
@@ -177,69 +153,22 @@ h2, h3, h4 {
     color: var(--color-letra-blanca);
 }
 
-.nombre {
-    color: var(--color-letra-blanca);
-    font-size: 1.8em;
-    font-weight: bold;
-    text-align: center;
-}
-.tituloPrograma{
-    text-align: center;
-    color: var(--color-celeste);
-    font-size: 1em;
+p{
+    font-size: 1.2em;
+    max-width: 60ch;
 }
 
-.articulo-sobreMi{
-    display: flex;
-    justify-content: center;
+section{
+    padding: 1em;
 }
 
-.articulo-sobreMi div{
-    display: flex;
-    flex-direction: column;
-    /* gap: em; */
-}
-.articulo-sobreMi .descripcion{
-    margin-top: 1em;
-    padding: 2em;
-    background-color: #3f3f3f25;
-    max-width: 40ch;
-    text-align: justify;
-}
+section p{
+    margin-left: 3em;
+}    
 
-progress{
-    background: none;
-}
-progress::-webkit-progress-bar{
-    background-color:rgba(19, 22, 22, 0.418) ;
-}
-progress::-webkit-progress-value{
-    background: var(--color-fucsia);
-
-}
-
-/* .sobreMi p{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 30%;
-    align-items: flex-end;
-} */
-
-/* .sobreMi article{
-    display: grid;
-    row-gap: 10px;
-    column-gap: 10px;
-    justify-content: center;
-    grid-template-columns: repeat(4,85px);
-    grid-template-rows: repeat(7,85px);
-} */
-
-section .año{
-    color: var(--color-celeste);
-    font-size: 1.4em;
-    font-weight: bolder;
-    display: flex;
-}
+article{
+    padding: 1em;
+}    
 
 .subtitulo{
     display: flex;
@@ -256,10 +185,65 @@ section .año{
     gap: 15px;
 }
 
-.articulo-proyectos .fotoProyecto{
+section .año{
+    color: var(--color-celeste);
+    font-size: 1.4em;
+    font-weight: bolder;
+    display: flex;
+}
+
+/* ------- Sobre Mi ---------- */
+
+.nombre {
+    color: var(--color-letra-blanca);
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tituloPrograma{
+    text-align: center;
+    color: var(--color-celeste);
+    font-size: 1em;
+}
+
+.articulo-sobreMi{
+    display: flex;
+    justify-content: center;
+}
+
+.articulo-sobreMi div{
+    display: flex;
+    flex-direction: column;
+}
+
+.articulo-sobreMi .descripcion{
+    margin-top: 1em;
+    padding: 2em;
+    background-color: #3f3f3f25;
+    max-width: 40ch;
+    text-align: justify;
+}
+
+/* ---------- Habilidades ---------- */
+
+progress{
+    background: none;
+}
+progress::-webkit-progress-bar{
+    background-color:rgba(19, 22, 22, 0.418) ;
+}
+progress::-webkit-progress-value{
+    background: var(--color-fucsia);
+
+}
+
+/*  ------------- Proyectos ------------ */
+
+.fotoProyecto{
     border: 2px solid rgba(0, 0, 0, 0.308);
     margin-left: 25%;
-    }
+}
 
 /* ----------- FOOTER --------------- */
 
@@ -267,7 +251,6 @@ footer h2{
     padding: 0;
     margin: 0;
     /* width:fit-content; */
-
 }
 
 footer{
@@ -293,10 +276,10 @@ footer dl{
     gap: 2em;
     padding-right: 20px;
 }
+
 footer dl dt{
     display: none;
 }
-
 
 /* ----------- DECORACION ------------- */
 
@@ -339,16 +322,17 @@ hr{
     right: -185px;
     width: 1045px;
 } 
-.hrCinco{
-    right: -220px;
-    width: 1010px;
-}
 
 .hrDos , .hrCuatro{
     border-color: var(--color-fucsia);
     background-color: var(--color-fucsia);
     width: 980px;
     right: -250px;
+}
+
+.hrCinco{
+    right: -220px;
+    width: 1010px;
 }
 
 @keyframes cambiarColor{

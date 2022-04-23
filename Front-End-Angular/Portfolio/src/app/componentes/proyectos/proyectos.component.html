@@ -1,0 +1,29 @@
+<section class="seccion proyectos">
+    <h2 id="Proyectos">
+        PROYECTOS
+        <span><img class="vector vectorCinco" src="/assets/imagenes/Vector 5.svg" alt="cuadro decoracion" width="280px"></span>   
+
+    </h2>
+
+    <hr class="hr hrCinco">
+
+    <article class="articulo articulo-proyectos" *ngFor="let proyecto of proyectosDatos">
+
+        <div class="subtitulo">
+            <div>
+                <img src="/assets/imagenes/angle-right-solid 1.svg" href="" width="15" alt="logo flecha">
+                <h3>{{proyecto.nombreProyecto}}</h3>
+            </div>
+            <p class="año">{{proyecto.anio}}</p>
+        </div>
+
+        <a class="link" href="https://github.com/larataschetta" target="_blank" >
+            <img class="fotoProyecto" [src]="proyecto.imagenProyecto" width="500" alt="foto proyecto">
+        </a>
+
+        <p>
+            {{proyecto.descripcion}}
+        </p>
+    </article>
+
+</section>
