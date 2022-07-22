@@ -2,7 +2,7 @@
     "nombre": "LARA TASCHETTA",
     "ubicacion": "Buenos Aires - Argentina",
     "git":"https://github.com/larataschetta",
-    "fotoPerfil": "PONER",  
+    "fotoPerfil": "assets/imagenes/foto4.jpeg",  
     "tituloPrograma": "Full Stack Developer Jr",
     "descripcion": "Estudiante de Biotecnología y aficionada por la programación. Disfruto resolver problemas y diseñar cosas lindas.",
     "experiencia": [{
@@ -53,19 +53,35 @@
         {
             "habilidad":"Angular",
             "porcentaje":"80"
+        },
+        {
+            "habilidad":"JavaScript",
+            "porcentaje":"80"
+        },
+        {
+            "habilidad":"Ingles",
+            "porcentaje":"80"
+        },
+        {
+            "habilidad":"Angular",
+            "porcentaje":"80"
         }
+
     ],
     "proyectos": [{
             "nombreProyecto":"Portfolio Web",
             "imagenProyecto":"assets/imagenes/ProyectoPortfolio.png",
             "anio":"2022",
-            "descripcion":"sadasdklasdkklf djkasdj asjdasjkd shbdakj"
+            "descripcion":"sadasdklasdkklf djkasdj asjdasjkd shbdakj",
+            "git": "https://github.com/larataschetta/Proyecto-final"
+
         },
         {
             "nombreProyecto":"Calculadora",
-            "imagenProyecto":"PONERRRRRRRRRRRRRR",
+            "imagenProyecto":"assets/imagenes/calculadora.png",
             "anio":"2022",
-            "descripcion":"asa sadasdklasdkklf djkasdj asjdasjkd shbdakj"
+            "descripcion":"asa sadasdklasdkklf djkasdj asjdasjkd shbdakj",
+            "git": "https://github.com/larataschetta/proyectos/tree/master/calculadora"
         }
     ],
     

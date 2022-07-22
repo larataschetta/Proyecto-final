@@ -227,6 +227,22 @@ section .año{
 
 /* ---------- Habilidades ---------- */
 
+.habilidadess{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.articulo-habilidades div{
+    display: flex;
+    /* vertical-align:auto; */
+    /* align-items: center; */
+}
+
+.articulo-habilidades div p{
+    margin-left: 15px;
+}
+
 progress{
     background: none;
 }
