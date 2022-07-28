@@ -1,0 +1,28 @@
+<form [formGroup]="expForm">
+    <div>
+        <label>Trabajo:</label>
+        <input type="text" [(ngModel)]="exp.trabajo" name="trabajo" formControlName="trabajo" required placeholder="Ingrese el nombre del trabajo">
+        <!-- <div *ngIf="Trabajo?.hasError('required')">
+            <p>sadas</p>
+        </div>     -->
+    </div>
+
+    <div>
+        <label>Tareas:</label>
+        <input type="text" [(ngModel)]="exp.tareas" name="tareas" formControlName="tareas" required placeholder="Ingrese las tareas">    
+    </div>
+
+    <div>
+        <label>Fecha de inicio:</label>
+        <input type="text" [(ngModel)]="exp.fechaInicio" name="fechaInicio" formControlName="fechaInicio" required placeholder="Ingrese la fecha de inicio">    
+    </div>
+
+    <div>
+        <label>Fecha de Fin:</label>
+        <input type="text" [(ngModel)]="exp.fechaFin" name="fechaFin" formControlName="fechaFin" required placeholder="Ingrese la fecha de fin">    
+    </div>
+
+    <button (click)="editarExp()" [disabled]="!expForm.valid"> Guardar </button>
+    <button type="button" (click)="volverAHome()"> Cancelar </button>
+
+</form>

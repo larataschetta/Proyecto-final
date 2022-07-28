@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { persona } from 'src/app/model/persona/persona.model';
+import { PersonaService } from 'src/app/servicios/persona.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -9,7 +11,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class SobreMiComponent implements OnInit {
   sobreMiDatos:any;
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio:PersonaService) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe (data => {

@@ -9,21 +9,38 @@
 
     <article class="articulo articulo-proyectos" *ngFor="let proyecto of proyectosDatos">
 
+        <div class="botones-editar" *ngIf="login">
+            <button class="edit editProyecto" (click)="onEdit(proyecto.id)">
+                <img src="/assets/imagenes/pen-solid.svg" alt="logo">
+            </button>
+
+            <button class="edit borrarProyecto" (click)="onDelete(proyecto.id)">
+                <img src="/assets/imagenes/trash-solid.svg" alt="logo">
+            </button>
+        </div>
+
         <div class="subtitulo">
             <div>
                 <img src="/assets/imagenes/angle-right-solid 1.svg" href="" width="15" alt="logo flecha">
-                <h3>{{proyecto.nombreProyecto}}</h3>
+                <h3>{{proyecto.nombre}}</h3>
             </div>
             <p class="año">{{proyecto.anio}}</p>
         </div>
-
-        <a class="link" href={{proyecto.git}} target="_blank" >
-            <img class="fotoProyecto" [src]="proyecto.imagenProyecto" width="500" alt="foto proyecto">
-        </a>
-
+        
         <p>
             {{proyecto.descripcion}}
         </p>
+
+        <a class="link" href={{proyecto.urlGit}} target="_blank" >
+            <img class="fotoProyecto" [src]="proyecto.urlFoto" width="500" alt="foto proyecto">
+        </a>
+            
     </article>
+
+    <div class="boton-agregar" *ngIf="login">
+        <button class="edit agregarProyecto" (click)="onAgregar()">
+            <img src="/assets/imagenes/plus-solid.svg" alt="logo">
+        </button>
+    </div>
 
 </section>

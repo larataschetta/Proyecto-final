@@ -10,13 +10,23 @@
 
     <article class="articulo articulo-experiencia" *ngFor="let experiencia of experienciaDatos">
         
+        <div class="botones-editar" *ngIf="login">
+            <button class="edit editExperiencia" (click)="onEdit(experiencia.id)">
+                <img src="/assets/imagenes/pen-solid.svg" alt="logo">
+            </button>
+
+            <button class="edit borrarExperiencia" (click)="onDelete(experiencia.id)">
+                <img src="/assets/imagenes/trash-solid.svg" alt="logo">
+            </button>
+        </div>
+
         <div class="subtitulo">
 
             <div>
                 <img src="/assets/imagenes/angle-right-solid 1.svg" width="15" alt="logo flecha">
                 <h3>{{experiencia.trabajo}}</h3>
             </div>
-            <p class="año">{{experiencia.anio}}</p>
+            <p class="año">{{experiencia.fechaInicio + " - " + experiencia.fechaFin}}</p>
 
         </div>
         
@@ -25,6 +35,12 @@
         </p>
     
     </article>
+
+    <div class="boton-agregar" *ngIf="login">
+        <button class="edit agregarExperiencia" (click)="onAgregar()">
+            <img src="/assets/imagenes/plus-solid.svg" alt="logo">
+        </button>
+    </div>
 <!-- 
     <article class="articulo articulo-experiencia">
     

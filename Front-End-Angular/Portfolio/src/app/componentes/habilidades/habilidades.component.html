@@ -9,11 +9,31 @@
 
     <div class="habilidadess">
         <article class="articulo articulo-habilidades" *ngFor="let habilidad of habilidadesDatos">
+
+            <div class="botones-editar" *ngIf="login">
+                <button class="edit editHabilidad" (click)="onEdit(habilidad.id)">
+                    <img src="/assets/imagenes/pen-solid.svg" alt="logo">
+                </button>
+    
+                <button class="edit borrarHabilidad" (click)="onDelete(habilidad.id)">
+                    <img src="/assets/imagenes/trash-solid.svg" alt="logo">
+                </button>
+            </div>
+
             <div>
-                <h3>{{habilidad.habilidad}}</h3>
+                <h3>{{habilidad.nombre}}</h3>
                 <p>{{habilidad.porcentaje}}%</p>
             </div>
                 <progress value="{{habilidad.porcentaje}}" max="100"></progress>
         </article>    
+
+        
+        
+    </div>
+
+    <div class="boton-agregar" *ngIf="login">
+        <button class="edit agregarHabilidad" (click)="onAgregar()">
+            <img src="/assets/imagenes/plus-solid.svg" alt="logo">
+        </button>
     </div>
 </section>

@@ -5,15 +5,15 @@
         </a>
 
         <div class="links">
-            <a class="link" href="/#sobre-mi">Sobre mi</a>
-            <a class="link" href="/#experiencia">Experiencia</a>
-            <a class="link" href="/#estudios">Estudios</a>
-            <a class="link" href="/#habilidades">Habilidades</a>
-            <a class="link" href="/#contacto">Contacto</a>        
+            <a class="link" href="portfolio#sobre-mi">Sobre mi</a>
+            <a class="link" href="portfolio#experiencia">Experiencia</a>
+            <a class="link" href="portfolio#estudios">Estudios</a>
+            <a class="link" href="/portfolio#habilidades">Habilidades</a>
+            <a class="link" href="portfolio#contacto">Contacto</a>        
         </div>
         
         <div>
-            <button class="link link-sign-in">
+            <button class="link link-sign-in" (click)="irInicioSesion()">
                 <span>Sign in</span> 
                 <img src="/assets/imagenes/User.svg" alt="logo">
             </button>
@@ -22,16 +22,23 @@
     </nav>
     
     <div class="titulo">
-        <h1>{{miPortfolio.nombre}}</h1>
-        <p>{{miPortfolio.ubicacion}}</p>    
+        <h1>{{miPortfolio.nombre + " " + miPortfolio.apellido}}</h1>
+        <p>{{miPortfolio.provincia + " - " + miPortfolio.pais}}</p>    
     </div>
     
+    <div class="boton-editPersona" *ngIf="login">
+        <button class="edit editPersona" (click)="onEdit()">
+            <img src="/assets/imagenes/pen-solid.svg" alt="logo">
+            <!-- <p>Editar persona</p>  despues sacar me parece -->
+        </button>
+    </div>
+
     <div class="logosAbajo">
         <a class="link" href="{{miPortfolio.git}}" target="_blank" >
             <img src="/assets/imagenes/github-brands 1.svg" width="35" alt="logo github">
         </a>
   
-        <a class="linkBajar" href="/#sobre-mi">
+        <a class="linkBajar" href="/portfolio#sobre-mi">
             <img src="/assets/imagenes/angles-down-solid 1.svg" width="30" alt="flecha bajar">
         </a>
     </div>

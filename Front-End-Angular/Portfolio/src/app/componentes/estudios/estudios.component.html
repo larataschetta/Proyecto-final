@@ -8,16 +8,35 @@
     <hr class="hr hrTres">
 
     <article class="articulo articulo-estudios" *ngFor="let estudios of estudiosDatos">
+
+        <div class="botones-editar" *ngIf="login">
+            <button class="edit editEstudio" (click)="onEdit(estudios.id)">
+                <img src="/assets/imagenes/pen-solid.svg" alt="logo">
+            </button>
+
+            <button class="edit borrarEstudio" (click)="onDelete(estudios.id)">
+                <img src="/assets/imagenes/trash-solid.svg" alt="logo">
+            </button>
+        </div>
+
+
         <div class="subtitulo">
             <div>
                 <img src="/assets/imagenes/angle-right-solid 1.svg" width="15" alt="logo flecha">
-                <h3>{{estudios.carrera}}</h3>
+                <h3>{{estudios.titulo}}</h3>
             </div>
-            <p class="año">{{estudios.anio}}</p>
+            <p class="año">{{estudios.fechaInicio + " - " + estudios.fechaFin}}</p>
         </div>
         <p>
-            {{estudios.descripcion}}
+            {{estudios.institucion}} <br> {{estudios.descripcion}}
         </p>
     </article>
+
+
+    <div class="boton-agregar" *ngIf="login">
+        <button class="edit agregarEstudio" (click)="onAgregar()">
+            <img src="/assets/imagenes/plus-solid.svg" alt="logo">
+        </button>
+    </div>
 
 </section>

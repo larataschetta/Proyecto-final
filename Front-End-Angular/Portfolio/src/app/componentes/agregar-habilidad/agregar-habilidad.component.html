@@ -1,0 +1,16 @@
+<form [formGroup]="habForm">
+
+    <div>
+        <label>Tareas:</label>
+        <input type="text" [(ngModel)]="hab.nombre" name="nombre" formControlName="nombre" required placeholder="Ingrese las tareas">    
+    </div>
+
+    <div>
+        <label>porcentaje:</label>
+        <input type="text" [(ngModel)]="hab.porcentaje" name="porcentaje" formControlName="porcentaje" required placeholder="Ingrese la fecha de inicio">    
+    </div>
+
+    <button (click)="agregarHab()" [disabled]="!habForm.valid"> Guardar </button>
+    <button type="button" (click)="volverAHome()"> Cancelar </button>
+
+</form>

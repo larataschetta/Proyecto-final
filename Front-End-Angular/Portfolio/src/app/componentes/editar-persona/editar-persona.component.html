@@ -1,0 +1,65 @@
+<form [formGroup]="perForm" class="form editar-persona">
+    <div>
+        <label>Nombre:</label>
+        <input type="text" [(ngModel)]="miPortfolio.nombre" name="nombre" formControlName="nombre" required placeholder="Ingrese el nombre">
+    </div>
+
+    <div>
+        <label>Apellido:</label>
+        <input type="text" [(ngModel)]="miPortfolio.apellido" name="apellido" formControlName="apellido" required placeholder="Ingrese el nombre">
+    </div>
+
+    <div>
+        <label>Pais:</label>
+        <input type="text" [(ngModel)]="miPortfolio.pais" name="pais" formControlName="pais" required placeholder="Ingrese el nombre">
+    </div>
+
+    <div>
+        <label>Provincia:</label>
+        <input type="text" [(ngModel)]="miPortfolio.provincia" name="provincia" formControlName="provincia" required placeholder="Ingrese el nombre">
+    </div>
+
+    <div>
+        <label>Localidad:</label>
+        <input type="text" [(ngModel)]="miPortfolio.localidad" name="localidad" formControlName="localidad" required placeholder="Ingrese el nombre">
+    </div>
+
+    <div>
+        <label>Mail:</label>
+        <input type="text" [(ngModel)]="miPortfolio.mail" name="mail" formControlName="mail" required placeholder="Ingrese el nombre">
+    </div>
+
+    <div>
+        <label>Telefono:</label>
+        <input type="text" [(ngModel)]="miPortfolio.telefono" name="telefono" formControlName="telefono" required placeholder="Ingrese el nombre">
+    </div>
+
+    <div>
+        <label>Descripcion:</label>
+        <input type="text" [(ngModel)]="miPortfolio.descripcion" name="descripcion"  formControlName="descripcion" required placeholder="Ingrese el nombre">
+    </div>
+
+    <div>
+        <label>Titulo profesion:</label>
+        <input type="text" [(ngModel)]="miPortfolio.tituloPrograma" name="tituloPrograma" formControlName="tituloPrograma" required placeholder="Ingrese el nombre">
+    </div>
+
+    <div>
+        <label>Foto Perfil:</label>
+        <input type="text" [(ngModel)]="miPortfolio.fotoPerfil" name="fotoPerfil" formControlName="fotoPerfil" required placeholder="Ingrese el nombre">
+    </div>
+
+    <div>
+        <label>Url Github:</label>
+        <input type="text" [(ngModel)]="miPortfolio.git" name="git" formControlName="git" required placeholder="Ingrese el nombre">
+    </div>
+
+    <div class="boton">
+
+        <button class="botonIS" (click)="editarPersona()" [disabled]="!perForm.valid"> Guardar </button>
+        <button class="botonIS" type="button" (click)="volverAHome()"> Cancelar </button>
+
+    </div>
+
+
+</form>

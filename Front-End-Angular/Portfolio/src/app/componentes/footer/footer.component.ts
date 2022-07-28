@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonaService } from 'src/app/servicios/persona.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -9,11 +10,11 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class FooterComponent implements OnInit {
   footerDatos:any;
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio:PersonaService) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data => {
-      this.footerDatos = data.footer;
+      this.footerDatos = data;
     })
   }
 

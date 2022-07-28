@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
+import { PersonaService } from 'src/app/servicios/persona.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -8,14 +11,28 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class EncabezadoComponent implements OnInit {
   miPortfolio: any;
+  login= false;
 
-  constructor(private datosPortfolio:PortfolioService) { }
+
+  constructor(private datosPortfolio:PersonaService, private ruta:Router, private autenticacionService:AutenticacionService) { 
+    // if(autenticacionService.UsuarioAutenticado){
+    //   this.login=true;
+    // }
+    this.login = autenticacionService.UsuarioAutenticado;
+  }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe( data => {
-      // console.log(data);
       this.miPortfolio = data;
     });
+  }
+
+  public onEdit(){
+    this.ruta.navigate(["/editar-persona"])
+  }
+
+  irInicioSesion(){
+    this.ruta.navigate(['/iniciar-sesion']);
   }
 
 }

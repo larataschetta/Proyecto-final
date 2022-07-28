@@ -1,0 +1,31 @@
+<form [formGroup]="proyForm">
+
+    <div>
+        <label>Nombre:</label>
+        <input type="text" [(ngModel)]="proy.nombre" name="nombre" formControlName="nombre" required placeholder="Ingrese las tareas">    
+    </div>
+
+    <div>
+        <label>Año:</label>
+        <input type="text" [(ngModel)]="proy.anio" name="anio" formControlName="anio" required placeholder="Ingrese la fecha de inicio">    
+    </div>
+
+    <div>
+        <label>Descripcion:</label>
+        <input type="text" [(ngModel)]="proy.descripcion" name="descripcion" formControlName="descripcion" required placeholder="Ingrese la fecha de inicio">    
+    </div>
+
+    <div>
+        <label>Url foto proyecto:</label>
+        <input type="text" [(ngModel)]="proy.urlFoto" name="urlFoto" formControlName="urlFoto" required placeholder="Ingrese la fecha de inicio">    
+    </div>
+
+    <div>
+        <label>Url git proyecto:</label>
+        <input type="text" [(ngModel)]="proy.urlGit" name="urlGit" formControlName="urlGit" required placeholder="Ingrese la fecha de inicio">    
+    </div>
+
+    <button (click)="editarProy()" [disabled]="!proyForm.valid"> Guardar </button>
+    <button type="button" (click)="volverAHome()"> Cancelar </button>
+
+</form>

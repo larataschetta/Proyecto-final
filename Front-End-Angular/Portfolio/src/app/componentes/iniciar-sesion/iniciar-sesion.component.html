@@ -1,0 +1,36 @@
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="login form">
+    <h1>Iniciar Sesion</h1>
+    <div class="login id">
+      <label for="exampleInputEmail1">Id</label>
+      <input type="id" formControlName="id" >
+      <div *ngIf="Id?.errors && Id?.touched">
+        <p>
+          El id es requerido
+        </p>
+      </div>
+    </div>
+
+    <div class="login email">
+      <label for="exampleInputEmail1">Usuario</label>
+      <input type="email" formControlName="correo" >
+      <div *ngIf="Email?.errors && Email?.touched">
+        <p *ngIf="Email?.hasError('required')">Ingrese el usuario</p>
+        <p *ngIf="Email?.hasError('email')">El formato debe ser valido</p>
+
+      </div>
+    </div>
+
+    <div class="login contrasenia">
+      <label for="exampleInputPassword1">Contraseña</label>
+      <input type="password" formControlName="contrasenia" class="form-control" >
+      <div *ngIf="Contrasenia?.errors && Contrasenia?.touched">
+        <p>Ingrese la contraseña</p>
+      </div>
+    </div>
+    
+    <div class="boton">
+      <button class="botonIS" type="submit" [disabled]="!form.valid">Enviar</button>
+      <p >{{this.respuesta}}</p>
+    </div>
+
+</form>
