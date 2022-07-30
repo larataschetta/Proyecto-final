@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-//@CrossOrigin(origins = "https://portfolio-lara.web.app")
+@CrossOrigin(origins = "https://portfolio-lara.web.app")
 
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class HabilidadController {
     
