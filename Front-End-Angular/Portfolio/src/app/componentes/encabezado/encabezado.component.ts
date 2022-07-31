@@ -15,9 +15,6 @@ export class EncabezadoComponent implements OnInit {
 
 
   constructor(private datosPortfolio:PersonaService, private ruta:Router, private autenticacionService:AutenticacionService) { 
-    // if(autenticacionService.UsuarioAutenticado){
-    //   this.login=true;
-    // }
     this.login = autenticacionService.UsuarioAutenticado;
   }
 
@@ -33,6 +30,15 @@ export class EncabezadoComponent implements OnInit {
 
   irInicioSesion(){
     this.ruta.navigate(['/iniciar-sesion']);
+  }
+
+  volverAHome(){
+    this.ruta.navigate(["/portfolio"]);
+  }
+
+  salirSesion(){
+    this.autenticacionService.logOut().subscribe;
+    location.reload()
   }
 
 }

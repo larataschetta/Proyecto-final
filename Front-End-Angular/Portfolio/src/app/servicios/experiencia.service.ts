@@ -7,7 +7,7 @@ import { experiencia } from '../model/persona/experiencia.model';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  url = "http://localhost:8080/ver/experiencia"
+  url = "https://portfolio-larat.herokuapp.com/ver/experiencia"
 
   constructor( private http:HttpClient ) { }
 
@@ -17,20 +17,20 @@ export class ExperienciaService {
   }
 
   public agregarExperiencia(exp:experiencia):Observable<Object>{
-    return this.http.post("http://localhost:8080/new/experiencia/", exp);
+    return this.http.post("https://portfolio-larat.herokuapp.com/new/experiencia/", exp);
   }
 
   public buscarExperiencia(id:number):Observable<experiencia>{
-    return this.http.get<experiencia>("http://localhost:8080/buscar/experiencia/" +id);
+    return this.http.get<experiencia>("https://portfolio-larat.herokuapp.com/buscar/experiencia/" +id);
   }
 
   public borrarExperiencia(id:number):Observable<Object>{
-    return this.http.delete("http://localhost:8080/delete/experiencia/" +id);
+    return this.http.delete("https://portfolio-larat.herokuapp.com/delete/experiencia/" +id);
   }
 
  
   public editarExp(id:number, exp:experiencia):Observable<Object>{
-    return this.http.put("http://localhost:8080/modificar/experiencia/" + id, exp);
+    return this.http.put("https://portfolio-larat.herokuapp.com/modificar/experiencia/" + id, exp);
   }
 
 

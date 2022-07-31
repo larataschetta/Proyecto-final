@@ -31,10 +31,8 @@ export class EditarEstudioComponent implements OnInit {
   ngOnInit(): void {
 
     this.id = this.route.snapshot.params["id"]; 
-    // console.log("id" + this.id)
     this.estudioService.buscarEstudio(this.id).subscribe(dato =>{
       this.est = dato;
-      // console.log("dato" + dato);
     })
   }
 

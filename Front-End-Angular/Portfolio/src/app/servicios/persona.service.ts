@@ -8,7 +8,7 @@ import { persona } from '../model/persona/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  url = "http://localhost:8080/buscar/persona/21"
+  url = "https://portfolio-larat.herokuapp.com/buscar/persona/2"
 
 
   constructor(private http:HttpClient) { }
@@ -18,11 +18,11 @@ export class PersonaService {
   }
 
   public crearPersona(per:persona):Observable<Object>{
-    return this.http.post('http://localhost:8080/new/persona',per);
+    return this.http.post('https://portfolio-larat.herokuapp.com/new/persona',per);
   }
 
   public editarPersona(per:persona):Observable<Object>{
-    return this.http.put('http://localhost:8080/modificar/persona/21',per)
+    return this.http.put('https://portfolio-larat.herokuapp.com/modificar/persona/2',per)
 
   }
 

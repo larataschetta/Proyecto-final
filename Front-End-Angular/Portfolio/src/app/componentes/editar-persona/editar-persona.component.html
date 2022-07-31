@@ -1,4 +1,6 @@
-<form [formGroup]="perForm" class="form editar-persona">
+<form [formGroup]="perForm" class="editar editar-persona">
+    <h1>Editar Persona</h1>
+    
     <div>
         <label>Nombre:</label>
         <input type="text" [(ngModel)]="miPortfolio.nombre" name="nombre" formControlName="nombre" required placeholder="Ingrese el nombre">
@@ -6,52 +8,52 @@
 
     <div>
         <label>Apellido:</label>
-        <input type="text" [(ngModel)]="miPortfolio.apellido" name="apellido" formControlName="apellido" required placeholder="Ingrese el nombre">
+        <input type="text" [(ngModel)]="miPortfolio.apellido" name="apellido" formControlName="apellido" required placeholder="Ingrese el apellido">
     </div>
 
     <div>
         <label>Pais:</label>
-        <input type="text" [(ngModel)]="miPortfolio.pais" name="pais" formControlName="pais" required placeholder="Ingrese el nombre">
+        <input type="text" [(ngModel)]="miPortfolio.pais" name="pais" formControlName="pais" required placeholder="Ingrese el pais">
     </div>
 
     <div>
         <label>Provincia:</label>
-        <input type="text" [(ngModel)]="miPortfolio.provincia" name="provincia" formControlName="provincia" required placeholder="Ingrese el nombre">
+        <input type="text" [(ngModel)]="miPortfolio.provincia" name="provincia" formControlName="provincia" required placeholder="Ingrese la provincia">
     </div>
 
     <div>
         <label>Localidad:</label>
-        <input type="text" [(ngModel)]="miPortfolio.localidad" name="localidad" formControlName="localidad" required placeholder="Ingrese el nombre">
+        <input type="text" [(ngModel)]="miPortfolio.localidad" name="localidad" formControlName="localidad" required placeholder="Ingrese la localidad">
     </div>
 
     <div>
         <label>Mail:</label>
-        <input type="text" [(ngModel)]="miPortfolio.mail" name="mail" formControlName="mail" required placeholder="Ingrese el nombre">
+        <input type="text" [(ngModel)]="miPortfolio.mail" name="mail" formControlName="mail" required placeholder="Ingrese el mail">
     </div>
 
     <div>
         <label>Telefono:</label>
-        <input type="text" [(ngModel)]="miPortfolio.telefono" name="telefono" formControlName="telefono" required placeholder="Ingrese el nombre">
+        <input type="text" [(ngModel)]="miPortfolio.telefono" name="telefono" formControlName="telefono" required placeholder="Ingrese el telefono">
     </div>
 
     <div>
         <label>Descripcion:</label>
-        <input type="text" [(ngModel)]="miPortfolio.descripcion" name="descripcion"  formControlName="descripcion" required placeholder="Ingrese el nombre">
+        <input type="text" [(ngModel)]="miPortfolio.descripcion" name="descripcion"  formControlName="descripcion" required placeholder="Ingrese su descripcion (sobre mi)">
     </div>
 
     <div>
         <label>Titulo profesion:</label>
-        <input type="text" [(ngModel)]="miPortfolio.tituloPrograma" name="tituloPrograma" formControlName="tituloPrograma" required placeholder="Ingrese el nombre">
+        <input type="text" [(ngModel)]="miPortfolio.tituloPrograma" name="tituloPrograma" formControlName="tituloPrograma" required placeholder="Ingrese el titulo que posee">
     </div>
 
     <div>
         <label>Foto Perfil:</label>
-        <input type="text" [(ngModel)]="miPortfolio.fotoPerfil" name="fotoPerfil" formControlName="fotoPerfil" required placeholder="Ingrese el nombre">
+        <input type="text" [(ngModel)]="miPortfolio.fotoPerfil" name="fotoPerfil" formControlName="fotoPerfil" required placeholder="Ingrese la direccion de la foto de perfil">
     </div>
 
     <div>
         <label>Url Github:</label>
-        <input type="text" [(ngModel)]="miPortfolio.git" name="git" formControlName="git" required placeholder="Ingrese el nombre">
+        <input type="text" [(ngModel)]="miPortfolio.git" name="git" formControlName="git" required placeholder="Ingrese la direccion de Github">
     </div>
 
     <div class="boton">

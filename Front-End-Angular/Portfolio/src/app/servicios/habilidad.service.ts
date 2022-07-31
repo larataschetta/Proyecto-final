@@ -7,7 +7,7 @@ import { habilidad } from '../model/persona/habilidad.model';
   providedIn: 'root'
 })
 export class HabilidadService {
-  url = "http://localhost:8080/ver/habilidades"
+  url = "https://portfolio-larat.herokuapp.com/ver/habilidades"
 
 
   constructor( private http:HttpClient ) { }
@@ -17,22 +17,21 @@ export class HabilidadService {
   }
 
   public agregarHabilidad(hab:habilidad):Observable<Object>{
-    return this.http.post("http://localhost:8080/new/habilidad/", hab);
+    return this.http.post("https://portfolio-larat.herokuapp.com/new/habilidad/", hab);
   }
 
   public buscarHabilidad(id:number):Observable<habilidad>{
-    return this.http.get<habilidad>("http://localhost:8080/buscar/habilidad/" +id);
+    return this.http.get<habilidad>("https://portfolio-larat.herokuapp.com/buscar/habilidad/" +id);
   }
 
   public borrarHabilidad(id:number):Observable<Object>{
-    return this.http.delete("http://localhost:8080/delete/habilidad/" +id);
+    return this.http.delete("https://portfolio-larat.herokuapp.com/delete/habilidad/" +id);
   }
 
  
   public editarHabilidad(id:number, hab:habilidad):Observable<Object>{
-    return this.http.put("http://localhost:8080/modificar/habilidad/" + id, hab);
+    return this.http.put("https://portfolio-larat.herokuapp.com/modificar/habilidad/" + id, hab);
   }
-
 
 
 }

@@ -15,7 +15,6 @@ export class EstudiosComponent implements OnInit {
 
   constructor( private estudioService:EstudioService, private ruta:Router, private autenticacionService:AutenticacionService) {
     this.login = autenticacionService.UsuarioAutenticado;
-
    }
 
   ngOnInit(): void {

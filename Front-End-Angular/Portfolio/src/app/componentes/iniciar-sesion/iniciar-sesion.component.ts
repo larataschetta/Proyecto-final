@@ -16,7 +16,7 @@ export class IniciarSesionComponent implements OnInit{
     
     this.form=this.formBuilder.group(
       {
-        id:["14",Validators.required],
+        id:["4",Validators.required],
         correo:["",[Validators.required,Validators.email]],
         contrasenia:["",[Validators.required]]
       }
@@ -42,7 +42,6 @@ export class IniciarSesionComponent implements OnInit{
 
   uri = 'http://localhost:8080/iniciar-sesion';
 
-  // {"id": (this.form.value).Id, "correo":(this.form.value).Email, "contrasenia":(this.form.value).Contrasenia}
 
   respuesta: String= "";
 
@@ -50,8 +49,6 @@ export class IniciarSesionComponent implements OnInit{
     event.preventDefault; 
    
     this.autenticacionService.iniciarSesion(this.form.value).subscribe(data=>{
-      // console.log("Data onEnviar" + JSON.stringify(data));
-      // this.ruta.navigate(['/portfolio']); //antes asi pero por mensaje respuesta:
 
       if(data){
       this.ruta.navigate(['/portfolio']);

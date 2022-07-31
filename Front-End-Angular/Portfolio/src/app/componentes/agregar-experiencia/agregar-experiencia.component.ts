@@ -20,7 +20,7 @@ export class AgregarExperienciaComponent implements OnInit {
       {
         trabajo:["",[Validators.required]],
         tareas:["",[Validators.required]],
-        fechaInicio:[Number,[Validators.required]],
+        fechaInicio:["",[Validators.required]],
         fechaFin:["",[Validators.required]],
         
       }

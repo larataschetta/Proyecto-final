@@ -8,7 +8,7 @@ import { estudio } from '../model/persona/estudio.model';
 })
 export class EstudioService {
 
-  url = "http://localhost:8080/ver/estudios"
+  url = "https://portfolio-larat.herokuapp.com/ver/estudios"
   
   constructor(  private http:HttpClient ) { }
 
@@ -17,20 +17,20 @@ export class EstudioService {
   }
 
 
-  public agregarEstudio(exp:estudio):Observable<Object>{
-    return this.http.post("http://localhost:8080/new/estudio/", exp);
+  public agregarEstudio(est:estudio):Observable<Object>{
+    return this.http.post("https://portfolio-larat.herokuapp.com/new/estudio/", est);
   }
 
   public buscarEstudio(id:number):Observable<estudio>{
-    return this.http.get<estudio>("http://localhost:8080/buscar/estudio/" +id);
+    return this.http.get<estudio>("https://portfolio-larat.herokuapp.com/buscar/estudio/" +id);
   }
 
   public borrarEstudio(id:number):Observable<Object>{
-    return this.http.delete("http://localhost:8080/delete/estudio/" +id);
+    return this.http.delete("https://portfolio-larat.herokuapp.com/delete/estudio/" +id);
   }
 
  
-  public editarEstudio(id:number, exp:estudio):Observable<Object>{
-    return this.http.put("http://localhost:8080/modificar/estudio/" + id, exp);
+  public editarEstudio(id:number, est:estudio):Observable<Object>{
+    return this.http.put("https://portfolio-larat.herokuapp.com/modificar/estudio/" + id, est);
   }
 }

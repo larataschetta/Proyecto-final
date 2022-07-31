@@ -16,13 +16,13 @@ export class EditarHabilidadComponent implements OnInit {
 
 
   constructor( private habilidadServ:HabilidadService, private ruta:Router, private formBuilder:FormBuilder, private route:ActivatedRoute) {
-    this.habForm=this.formBuilder.group(
-      {
-        nombre:["",[Validators.required]],
-        porcentaje:["",[Validators.required]],
-        
-      }
-    )
+      this.habForm=this.formBuilder.group(
+        {
+          nombre:["",[Validators.required]],
+          porcentaje:["",[Validators.required]],
+            
+        }
+      )
 
    }
 

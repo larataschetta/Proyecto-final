@@ -8,7 +8,7 @@ import { proyecto } from '../model/persona/proyecto.model';
 })
 
 export class ProyectoService {
-  url = "http://localhost:8080/ver/proyectos"
+  url = "https://portfolio-larat.herokuapp.com/ver/proyectos"
 
 
   constructor( private http:HttpClient ) { }
@@ -18,19 +18,19 @@ export class ProyectoService {
   }
 
   public agregarProyecto(proy:proyecto):Observable<Object>{
-    return this.http.post("http://localhost:8080/new/proyecto/", proy);
+    return this.http.post("https://portfolio-larat.herokuapp.com/new/proyecto/", proy);
   }
 
   public buscarProyecto(id:number):Observable<proyecto>{
-    return this.http.get<proyecto>("http://localhost:8080/buscar/proyecto/" +id);
+    return this.http.get<proyecto>("https://portfolio-larat.herokuapp.com/buscar/proyecto/" +id);
   }
 
   public borrarProyecto(id:number):Observable<Object>{
-    return this.http.delete("http://localhost:8080/delete/proyecto/" +id);
+    return this.http.delete("https://portfolio-larat.herokuapp.com/delete/proyecto/" +id);
   }
 
  
   public editarProyecto(id:number, proy:proyecto):Observable<Object>{
-    return this.http.put("http://localhost:8080/modificar/proyecto/" + id, proy);
+    return this.http.put("https://portfolio-larat.herokuapp.com/modificar/proyecto/" + id, proy);
   }
 }

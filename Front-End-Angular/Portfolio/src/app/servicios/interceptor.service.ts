@@ -6,21 +6,13 @@ import { AutenticacionService } from './autenticacion.service';
 @Injectable({
   providedIn: 'root'
 })
-export class InterceptorService implements HttpInterceptor {
+export class InterceptorService implements HttpInterceptor  {
 
   constructor(private autenticacionService:AutenticacionService) { }
 
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  intercept(req: HttpRequest<any>, next: HttpHandler) {
 
-    var currentUser= this.autenticacionService.UsuarioAutenticado;
-    if (currentUser){
-      req=req.clone({
-        setHeaders:{
-          Authorization: 'Bearer ${asda}'
-        }
-      })
-    }
-    console.log("interceptorr"+ JSON.stringify(currentUser));
+
     return next.handle(req);
   }
 }

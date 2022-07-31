@@ -15,7 +15,6 @@ import { GuardGuard } from './servicios/guard.guard';
 
 const routes: Routes = [
   {path:"portfolio",component:PortfolioComponent, pathMatch:"full"},
-  // {path:"portfolio#sobre-mi", redirectTo:"portfolio#sobre-mi"}, 
   {path:"iniciar-sesion", component:IniciarSesionComponent},
   {path:"",redirectTo:"portfolio",pathMatch:"full"},
   {path:"editar-persona", component:EditarPersonaComponent, canActivate:[GuardGuard] },  

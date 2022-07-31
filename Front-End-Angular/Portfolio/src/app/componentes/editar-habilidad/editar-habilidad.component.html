@@ -1,16 +1,19 @@
-<form [formGroup]="habForm">
-
+<form [formGroup]="habForm" class="editar">
+    <h1>Editar Habilidad</h1>
     <div>
-        <label>Tareas:</label>
-        <input type="text" [(ngModel)]="hab.nombre" name="nombre" formControlName="nombre" required placeholder="Ingrese las tareas">    
+        <label>Habilidad:</label>
+        <input type="text" [(ngModel)]="hab.nombre" name="nombre" formControlName="nombre" required placeholder="Ingrese la habilidad">    
     </div>
 
     <div>
-        <label>porcentaje:</label>
-        <input type="text" [(ngModel)]="hab.porcentaje" name="porcentaje" formControlName="porcentaje" required placeholder="Ingrese la fecha de inicio">    
+        <label>Porcentaje:</label>
+        <input type="text" [(ngModel)]="hab.porcentaje" name="porcentaje" formControlName="porcentaje" required placeholder="Ingrese el porcentaje, sin el %">    
     </div>
 
-    <button (click)="editarHab()" [disabled]="!habForm.valid"> Guardar </button>
-    <button type="button" (click)="volverAHome()"> Cancelar </button>
+    <div class="boton">
+        <button class="botonIS" (click)="editarHab()" [disabled]="!habForm.valid"> Guardar </button>
+        <button class="botonIS" type="button" (click)="volverAHome()"> Cancelar </button>
+
+    </div>
 
 </form>

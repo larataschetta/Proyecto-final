@@ -1,31 +1,35 @@
-<form [formGroup]="proyForm">
+<form [formGroup]="proyForm" class="editar">
 
     <div>
         <label>Nombre:</label>
-        <input type="text" [(ngModel)]="proy.nombre" name="nombre" formControlName="nombre" required placeholder="Ingrese las tareas">    
+        <input type="text" [(ngModel)]="proy.nombre" name="nombre" formControlName="nombre" required placeholder="Ingrese el nombre del proyecto">    
     </div>
 
     <div>
         <label>Año:</label>
-        <input type="text" [(ngModel)]="proy.anio" name="anio" formControlName="anio" required placeholder="Ingrese la fecha de inicio">    
+        <input type="text" [(ngModel)]="proy.anio" name="anio" formControlName="anio" required placeholder="Ingrese el año">    
     </div>
 
     <div>
         <label>Descripcion:</label>
-        <input type="text" [(ngModel)]="proy.descripcion" name="descripcion" formControlName="descripcion" required placeholder="Ingrese la fecha de inicio">    
+        <textarea type="text" [(ngModel)]="proy.descripcion" name="descripcion" formControlName="descripcion" required placeholder="Ingrese la descripcion"></textarea>
     </div>
 
     <div>
         <label>Url foto proyecto:</label>
-        <input type="text" [(ngModel)]="proy.urlFoto" name="urlFoto" formControlName="urlFoto" required placeholder="Ingrese la fecha de inicio">    
+        <input type="text" [(ngModel)]="proy.urlFoto" name="urlFoto" formControlName="urlFoto" required placeholder="Ingrese la direccion de la foto">    
     </div>
 
     <div>
-        <label>Url git proyecto:</label>
-        <input type="text" [(ngModel)]="proy.urlGit" name="urlGit" formControlName="urlGit" required placeholder="Ingrese la fecha de inicio">    
+        <label>Url GitHub proyecto:</label>
+        <input type="text" [(ngModel)]="proy.urlGit" name="urlGit" formControlName="urlGit" required placeholder="Ingrese la direccion de Github">    
     </div>
 
-    <button (click)="editarProy()" [disabled]="!proyForm.valid"> Guardar </button>
-    <button type="button" (click)="volverAHome()"> Cancelar </button>
+    <div class="boton">
+        <button class="botonIS" (click)="editarProy()" [disabled]="!proyForm.valid"> Guardar </button>
+        <button class="botonIS" type="button" (click)="volverAHome()"> Cancelar </button>
+
+    </div>
+
 
 </form>

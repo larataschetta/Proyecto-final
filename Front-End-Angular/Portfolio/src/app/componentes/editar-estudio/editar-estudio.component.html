@@ -1,25 +1,24 @@
-<form [formGroup]="estForm">
+<form [formGroup]="estForm" class="editar">
+    <h1>Editar Estudio</h1>
     <div>
         <label>Estudio:</label>
         <input type="text" [(ngModel)]="est.titulo" name="titulo" formControlName="titulo" required placeholder="Ingrese el nombre del estudio">
-        <!-- <div *ngIf="Trabajo?.hasError('required')">
-            <p>sadas</p>
-        </div>     -->
+
     </div>
 
     <div>
         <label>Institucion:</label>
-        <input type="text" [(ngModel)]="est.institucion" name="institucion" formControlName="institucion" required placeholder="Ingrese las tareas">    
+        <input type="text" [(ngModel)]="est.institucion" name="institucion" formControlName="institucion" required placeholder="Ingrese la institucion">    
     </div>
 
     <div>
         <label>Descripcion:</label>
-        <input type="text" [(ngModel)]="est.descripcion" name="descripcion" formControlName="descripcion" required placeholder="Ingrese la fecha de inicio">    
+        <textarea type="text" [(ngModel)]="est.descripcion" name="descripcion" formControlName="descripcion" required placeholder="Ingrese la descripcion"></textarea>
     </div>
 
     <div>
         <label>Fecha de Inicio:</label>
-        <input type="text" [(ngModel)]="est.fechaInicio" name="fechaInicio" formControlName="fechaInicio" required placeholder="Ingrese la fecha de fin">    
+        <input type="text" [(ngModel)]="est.fechaInicio" name="fechaInicio" formControlName="fechaInicio" required placeholder="Ingrese la fecha de inicio">    
     </div>
 
     <div>
@@ -27,7 +26,11 @@
         <input type="text" [(ngModel)]="est.fechaFin" name="fechaFin" formControlName="fechaFin" required placeholder="Ingrese la fecha de fin">    
     </div>
 
-    <button (click)="editarEstudio()" [disabled]="!estForm.valid"> Guardar </button>
-    <button type="button" (click)="volverAHome()"> Cancelar </button>
+    <div class="boton">
+
+        <button class="botonIS" (click)="editarEstudio()" [disabled]="!estForm.valid"> Guardar </button>
+        <button class="botonIS" type="button" (click)="volverAHome()"> Cancelar </button>
+
+    </div>
 
 </form>
